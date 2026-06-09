@@ -1,6 +1,13 @@
 import os
+from dotenv import load_dotenv
 from twilio.rest import Client
-from clave.twilio_config import TWILIO_Account_SID , TWILIO_Auth_Token , Twilio_phone_number , API_KEY_WAPI
+load_dotenv()
+# 2. Obtenemos los valores desde las variables de entorno
+TWILIO_Account_SID = os.getenv('TWILIO_ACCOUNT_SID')
+TWILIO_Auth_Token = os.getenv('TWILIO_AUTH_TOKEN')
+Twilio_phone_number = os.getenv('TWILIO_PHONE_NUMBER')
+API_KEY_WAPI = os.getenv('API_KEY_WAPI')
+#from clave.twilio_config import TWILIO_Account_SID , TWILIO_Auth_Token , Twilio_phone_number , API_KEY_WAPI
 import time
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects

@@ -1,5 +1,6 @@
-node_modules
-twilio_config.py
-.env
+# Entorno virtual
+venv/
+
+# Archivos de caché de Python
 __pycache__/
 *.pyc
