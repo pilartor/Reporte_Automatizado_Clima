@@ -1,6 +1,6 @@
 from twilio.rest import Client
 from twilio.rest import Client
-from twilio_config import TWILIO_Account_SID , TWILIO_Auth_Token , Twilio_phone_number , API_KEY_WAPI
+from clave.twilio_config import TWILIO_Account_SID , TWILIO_Auth_Token , Twilio_phone_number , API_KEY_WAPI
 
 # Reemplaza con tus datos reales
 account_sid = TWILIO_Account_SID
