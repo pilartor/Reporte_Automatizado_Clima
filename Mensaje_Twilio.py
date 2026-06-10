@@ -61,8 +61,18 @@ print(df)
 
 ##Resultado DF
 df_rain = df[(df['Lluvia']==1) & (df['Hora']> 6) & (df['Hora']< 23)]
-df_rain = df_rain[['Hora', 'Condicion']]
-df_rain.set_index('Hora', inplace = True)
+
+if df_rain.empty:
+    default_data = pd.DataFrame({
+        'Hora': [24], 
+        'Condicion': ['sin probabilidad']
+    })
+    default_data.set_index('Hora', inplace=True)
+    df_rain = default_data
+else:
+    df_rain = df_rain[['Hora', 'Condicion']]
+    df_rain.set_index('Hora', inplace=True)
+
 print(df_rain)
 
 ####Armar Template ######
